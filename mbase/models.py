@@ -26,28 +26,28 @@ class MetaBaseModel(models.Model):
         abstract = True
         
         
-class MetaBasePrepopulatedSlugedModel(models.Model):
+class MetaBasePrepopulatedSlugModel(models.Model):
     slug = AutoSlugField(unique=True, populate_from='title')
     
     class Meta:
         abstract = True
         
 
-class MetaBaseSlugedModel(models.Model):
+class MetaBaseSlugModel(models.Model):
     slug = AutoSlugField(unique=True)
     
     class Meta:
         abstract = True
         
         
-class MetaBaseTitledModel(models.Model):
+class MetaBaseTitleModel(models.Model):
     title = models.CharField(max_length=255, verbose_name=_(u'Title'))
     
     class Meta:
         abstract = True
         
         
-class MetaBaseShortTitledModel(models.Model):
+class MetaBaseShortTitleModel(models.Model):
     title = models.CharField(max_length=120, verbose_name=_(u'Title'))
     
     class Meta:
@@ -69,7 +69,7 @@ class MetaBaseSeoModel(models.Model):
         abstract = True  
         
 
-class MetaBaseStatusedModel(models.Model):
+class MetaBaseStatusModel(models.Model):
     status = models.PositiveSmallIntegerField(verbose_name=_(u'Status'), choices=STATUSES, default=STATUSES[0][0])
     
     class Meta:
