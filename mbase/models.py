@@ -40,6 +40,13 @@ class MetaBaseTitledModel(models.Model):
         abstract = True
         
         
+class MetaBaseShortTitledModel(models.Model):
+    title = models.CharField(max_length=120, verbose_name=_(u'Title'))
+    
+    class Meta:
+        abstract = True
+        
+        
 class MetaBaseContentModel(models.Model):
     content = models.TextField(null=True, blank=True, verbose_name=_(u"Content"))
     
@@ -67,11 +74,4 @@ class MetaBasePostedByModel(models.Model):
     
     class Meta:
         abstract = True
-
-
-
-
-
-
-
 
