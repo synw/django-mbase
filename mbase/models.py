@@ -26,9 +26,15 @@ class MetaBaseModel(models.Model):
         abstract = True
         
         
+class MetaBaseSlugedModel(MetaBaseModel):
+    slug = AutoSlugField(unique=True, populate_from='title')
+    
+    class Meta:
+        abstract = True
+        
+        
 class MetaBaseTitledModel(MetaBaseModel):
     title = models.CharField(max_length=255, verbose_name=_(u'Title'))
-    slug = AutoSlugField(unique=True, populate_from='title')
     
     class Meta:
         abstract = True
