@@ -26,25 +26,33 @@ class MetaBaseModel(models.Model):
         abstract = True
         
         
-class MetaBaseSlugedModel(MetaBaseModel):
+class MetaBaseSlugedModel(models.Model):
     slug = AutoSlugField(unique=True, populate_from='title')
     
     class Meta:
         abstract = True
         
         
-class MetaBaseTitledModel(MetaBaseModel):
+class MetaBaseTitledModel(models.Model):
     title = models.CharField(max_length=255, verbose_name=_(u'Title'))
     
     class Meta:
         abstract = True
         
         
-class MetaBaseContentModel(MetaBaseTitledModel):
+class MetaBaseContentModel(models.Model):
     content = models.TextField(null=True, blank=True, verbose_name=_(u"Content"))
     
     class Meta:
         abstract = True
+        
+        
+class MetaBaseSeoModel(models.Model):
+    seo_description = models.CharField(max_length=255, null=True, blank=True, verbose_name=_(u'SEO: description'), help_text=_(u'Short description'))
+    seo_keywords = models.CharField(max_length=255, null=True, blank=True, verbose_name=(u'SEO: keywords'), help_text=_(u'List of keywords separated by comas'))
+
+    class Meta:
+        abstract = True  
         
 
 class MetaBaseStatusedModel(models.Model):
