@@ -4,8 +4,6 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
-from autoslug import AutoSlugField
-
 
 default_statuses =  [
                      (0, _(u'Published')),
@@ -14,6 +12,7 @@ default_statuses =  [
                      ]
 
 STATUSES = getattr(settings, 'MBASE_STATUSES', default_statuses)
+SLUG_MAX_LENGTH = getattr(settings, 'MBASE_SLUG_MAX_LENGTH', 25)
 USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', User)
 
 
@@ -25,16 +24,9 @@ class MetaBaseModel(models.Model):
     class Meta:
         abstract = True
         
-        
-class MetaBasePrepopulatedSlugModel(models.Model):
-    slug = AutoSlugField(unique=True, populate_from='title')
-    
-    class Meta:
-        abstract = True
-        
 
-class MetaBaseSlugModel(models.Model):
-    slug = AutoSlugField(unique=True)
+class MetaBaseUniqueSlugModel(models.Model):
+    slug = models.CharField(max_length=25, unique=True)
     
     class Meta:
         abstract = True
