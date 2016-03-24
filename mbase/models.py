@@ -46,6 +46,13 @@ class MetaBaseShortTitleModel(models.Model):
         abstract = True
         
         
+class MetaBaseNameModel(models.Model):
+    name = models.CharField(max_length=120, verbose_name=_(u'Name'))
+    
+    class Meta:
+        abstract = True
+        
+        
 class MetaBaseContentModel(models.Model):
     content = models.TextField(null=True, blank=True, verbose_name=_(u"Content"))
     
