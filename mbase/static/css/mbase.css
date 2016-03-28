@@ -80,6 +80,9 @@
 .gfx {
 	position:fixed;
 }
+.gnp {
+	padding:0;
+}
 /* ##################################### Responsive stuff ##################################### */
 @media all and (max-width: 767px) {
   	.center-xs {
