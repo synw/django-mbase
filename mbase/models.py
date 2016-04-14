@@ -81,3 +81,11 @@ class MetaBasePostedByModel(models.Model):
     class Meta:
         abstract = True
 
+
+class OrderedModel(models.Model):
+    status = models.PositiveSmallIntegerField(verbose_name=_(u'Order'))
+    
+    class Meta:
+        abstract = True
+        ordering = ['order']
+

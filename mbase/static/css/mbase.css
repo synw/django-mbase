@@ -83,6 +83,10 @@
 .gnp {
 	padding:0;
 }
+.gcv {
+	margin-top: 50vh; 
+	transform: translateY(-50%); 
+}
 /* ##################################### Responsive stuff ##################################### */
 @media all and (max-width: 767px) {
   	.center-xs {
