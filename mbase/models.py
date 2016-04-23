@@ -26,7 +26,7 @@ class MetaBaseModel(models.Model):
         
 
 class MetaBaseUniqueSlugModel(models.Model):
-    slug = models.CharField(max_length=25, unique=True)
+    slug = models.SlugField(max_length=25, unique=True)
     
     class Meta:
         abstract = True
