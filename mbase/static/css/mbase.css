@@ -96,6 +96,18 @@
 		width:100%;
 		text-align:center;
 	}
+	.gus-xs {
+		padding-top:1em;
+	}
+	.gus-xs-md {
+		padding-top:2em;
+	}
+	.gds-xs {
+		padding-bottom:1em;
+	}
+	.gds-xs-md {
+		padding-top:1em;
+	}
 }
 @media all and (max-width: 360px) {
   	.visible-xxs {
@@ -109,6 +121,9 @@
 	}
 	.gus-xxs {
 		padding-top:1em;
+	}
+	.center-xxs {
+		text-align:center;
 	}
 }
 @media all and (min-width: 361px) {
