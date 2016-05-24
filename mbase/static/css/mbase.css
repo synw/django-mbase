@@ -116,14 +116,24 @@
 	.hidden-xxs {
 		display:none;
 	}
-	.gds-xxs {
-		padding-bottom:1em;
+	.center-xxs {
+		text-align:center;
+	}
+	.center-xxs-fw {
+		text-align:center;
+		width:100%;
 	}
 	.gus-xxs {
 		padding-top:1em;
 	}
-	.center-xxs {
-		text-align:center;
+	.gus-xxs-md {
+		padding-top:2em;
+	}
+	.gds-xxs {
+		padding-bottom:1em;
+	}
+	.gds-xxs-md {
+		padding-top:1em;
 	}
 }
 @media all and (min-width: 361px) {
@@ -142,6 +152,13 @@
 	border:1px dotted orange;
 	background-color:yellow;
 }
-
-
+/* ##################################### Widgets ##################################### */
+.blocknav {
+	display:inline-block;
+	padding:1em;
+	margin:1em;
+	border-radius:1em;
+	border:1px solid grey;
+	box-shadow: 5px 5px 5px #aaa;
+}
 
