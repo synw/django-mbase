@@ -1,0 +1,5 @@
+recursive-include mqueue/static *
+recursive-include mqueue/templates *
+recursive-include mqueue/temlatetags *
+recursive-include mqueue/locale *
+recursive-include mqueue/migrations *
