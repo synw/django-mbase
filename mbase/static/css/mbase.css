@@ -108,6 +108,18 @@
 	.gds-xs-md {
 		padding-top:1em;
 	}
+	.grs-xs {
+		padding-right:1em;
+	}
+	.grs-xs-md {
+		padding-right:2em;
+	}
+	.gls-xs {
+		padding-left:1em;
+	}
+	.gls-xs-md {
+		padding-left:2em;
+	}
 }
 @media all and (max-width: 360px) {
   	.visible-xxs {
@@ -134,6 +146,18 @@
 	}
 	.gds-xxs-md {
 		padding-top:1em;
+	}
+	.grs-xxs {
+		padding-right:1em;
+	}
+	.grs-xxs-md {
+		padding-right:2em;
+	}
+	.gls-xxs {
+		padding-left:1em;
+	}
+	.gls-xxs-md {
+		padding-left:2em;
 	}
 }
 @media all and (min-width: 361px) {

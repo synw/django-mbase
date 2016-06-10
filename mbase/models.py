@@ -72,10 +72,17 @@ class MetaBasePostedByModel(models.Model):
         abstract = True
 
 
-class OrderedModel(models.Model):
+class MetaBaseOrderedModel(models.Model):
     order = models.PositiveSmallIntegerField(verbose_name=_(u'Order'))
     
     class Meta:
         abstract = True
         ordering = ['order']
+
+class MetaBaseDateModel(models.Model):
+    date = models.DateTimeField(editable=False, null=True, blank=True, auto_now_add=True, verbose_name=_(u'Date'))
+  
+    class Meta:
+        abstract = True
+
 
